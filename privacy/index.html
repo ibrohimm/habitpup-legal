@@ -30,11 +30,12 @@
 </ul>
 
 <h2>What we collect, and only if you allow it</h2>
-<p>To fix crashes and learn which features help, release versions of the app send <strong>anonymous</strong> usage and crash data through Google Firebase (Analytics and Crashlytics). This is on by default and you can turn it off at any time in <strong>Settings › About › Share anonymous usage data</strong>. When it is off, nothing is sent. It includes:</p>
+<p>To fix crashes and learn which features help, release versions of the app send <strong>anonymous</strong> usage and crash data through Google Firebase (Analytics, Crashlytics and Cloud Firestore). This is on by default and you can turn it off at any time in <strong>Settings › About › Share anonymous usage data</strong>. When it is off, nothing is sent. It includes:</p>
 <ul>
 <li>App events such as "a habit was checked in", "a backup was made", "the Pro screen was shown" or "an import finished", with details like the kind of habit (yes/no, count or amount) or how many habits were imported.</li>
 <li>Crash reports with technical details of what went wrong (Firebase Crashlytics).</li>
 <li>A random app instance ID created by Firebase, device model, system version, app version, language, and an approximate country derived by Google from the connection.</li>
+<li>A small device record, updated at most once a day, so we can count how many devices use Habitpup: device model, system version, app version, phone and app language, country and time zone setting, how many habits you have (not what they are), whether Pro is active, and when the app was first and last opened. It is stored in Google Cloud Firestore under a random ID from Firebase Anonymous Authentication.</li>
 </ul>
 <p><strong>Never included:</strong> the names you give your habits, your notes, your check-in history, your contacts, location or any advertising identifier. This data is not linked to your name, email or Apple / Google account. We don't use it for advertising, we don't track you across other apps or websites, and we don't sell or share it with anyone except the service providers below.</p>
 
@@ -43,7 +44,7 @@
 
 <h2>Service providers</h2>
 <ul>
-<li>Google Firebase Analytics and Crashlytics (anonymous usage and crash data): <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></li>
+<li>Google Firebase Analytics, Crashlytics, Cloud Firestore and Anonymous Authentication (anonymous usage data, crash reports and the device record): <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></li>
 <li>RevenueCat (purchase receipts): <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></li>
 <li>Apple (App Store payments, iCloud Drive backups): <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></li>
 <li>Google (Google Play payments, Android Auto Backup, Google Drive backups you turn on): <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
@@ -56,7 +57,7 @@
 <ul>
 <li><strong>Delete all data:</strong> Settings › About › Delete all my data erases every habit, check-in and note on the device, along with the app's automatic backups. Files you exported, copies in a folder you chose and backups in Google Drive stay where they are until you delete them there.</li>
 <li>Deleting the app removes everything stored on the device. Android Auto Backup copies are managed in your Google account; iCloud Drive files in the Files app.</li>
-<li>Anonymous usage data is kept by Firebase for up to 14 months, crash reports for up to 90 days. Because it is not linked to you, we can't look it up by name or email; turning the switch off stops any new data.</li>
+<li>Anonymous usage data is kept by Firebase for up to 14 months, crash reports for up to 90 days. The device record is kept while the app is in use. Because it is not linked to you, we can't look it up by name or email; turning the switch off stops any new data.</li>
 </ul>
 
 <h2>Your rights</h2>
