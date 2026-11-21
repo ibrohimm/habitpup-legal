@@ -35,7 +35,7 @@
 <li>App events such as "a habit was checked in", "a backup was made", "the Pro screen was shown" or "an import finished", with details like the kind of habit (yes/no, count or amount) or how many habits were imported.</li>
 <li>Crash reports with technical details of what went wrong (Firebase Crashlytics).</li>
 <li>A random app instance ID created by Firebase, device model, system version, app version, language, and an approximate country derived by Google from the connection.</li>
-<li>A small device record, updated at most once a day, so we can count how many devices use Habitpup: device model, system version, app version, phone and app language, country and time zone setting, how many habits you have (not what they are), whether Pro is active, and when the app was first and last opened. It is stored in Google Cloud Firestore under a random ID from Firebase Anonymous Authentication.</li>
+<li>A small device record, updated every few days (only on real devices), so we can count how many devices use Habitpup: device model, system version, app version, phone and app language, country and time zone setting, how many habits you have (not what they are), whether Pro is active, and when the app was first and last opened. It is stored in Google Cloud Firestore under a random ID from Firebase Anonymous Authentication.</li>
 </ul>
 <p><strong>Never included:</strong> the names you give your habits, your notes, your check-in history, your contacts, location or any advertising identifier. This data is not linked to your name, email or Apple / Google account. We don't use it for advertising, we don't track you across other apps or websites, and we don't sell or share it with anyone except the service providers below.</p>
 
